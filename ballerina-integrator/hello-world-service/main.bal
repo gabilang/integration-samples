@@ -10,5 +10,9 @@ service / on new http:Listener(9090) {
     resource function get hello(string foo) returns string {
         return "Hello, World!";
     }
+
+    resource function get bar() returns string {
+        return "Hello, World!";
+    }
 }
 
