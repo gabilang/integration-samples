@@ -1,5 +1,7 @@
 import ballerina/http;
 
+configurable string str = ?; 
+
 service / on new http:Listener(9090) {
 
     // This function responds with `string` value `Hello, World!` to HTTP GET requests.
@@ -16,7 +18,7 @@ service / on new http:Listener(9090) {
     }
 
     resource function get foo() returns string {
-        return "Hello, Devant!";
+        return str;
     }
 }
 
