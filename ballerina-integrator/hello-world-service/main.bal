@@ -3,6 +3,7 @@ import ballerina/http;
 configurable string str = ?; 
 configurable int a = ?;
 configurable int b = ?;
+configurable int c = ?;
 
 service / on new http:Listener(9090) {
 
