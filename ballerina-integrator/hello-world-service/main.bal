@@ -4,6 +4,7 @@ configurable string str = ?;
 configurable int a = ?;
 configurable int b = ?;
 configurable int c = ?;
+configurable int d = ?;
 configurable string foo = ?;
 configurable string baz = ?;
 
