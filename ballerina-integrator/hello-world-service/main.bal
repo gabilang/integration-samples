@@ -4,6 +4,7 @@ configurable string str = ?;
 configurable int a = ?;
 configurable int b = ?;
 configurable int c = ?;
+configurable string foo = ?;
 
 service / on new http:Listener(9090) {
 
