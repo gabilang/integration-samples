@@ -31,5 +31,9 @@ service / on new http:Listener(9090) {
     resource function get getA() returns int {
         return a;
     }
+
+    resource function get getB() returns int {
+        return b;
+    }
 }
 
