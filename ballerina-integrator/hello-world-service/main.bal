@@ -17,15 +17,19 @@ service / on new http:Listener(9090) {
     }
 
     resource function get hello(string foo) returns string {
-        return "Hello, World!";
+        return str;
     }
 
     resource function get bar() returns string {
-        return "Hello, World!";
+        return foo;
     }
 
     resource function get foo() returns string {
-        return str;
+        return baz;
+    }
+
+    resource function get getA() returns int {
+        return a;
     }
 }
 
