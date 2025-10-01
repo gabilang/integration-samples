@@ -20,6 +20,8 @@ configurable Greeting nestedGreeting = ?;
 
 configurable string? nullString = "abc";
 
+configurable string|int|null intStringNil = "abc";
+
 configurable string str = ?; 
 configurable int a = ?;
 configurable int b = ?;
@@ -32,6 +34,8 @@ service / on new http:Listener(9090) {
         // io:println(greetingStrMap);
         io:println(nestedGreeting);
         // Greeting greetingMessage = {"from" : "name2", "to" : "name2", "message" : "BLUE"};
+
+        io:println("intStringNil: ", intStringNil);
         return "greetingMessage";
     }
 
