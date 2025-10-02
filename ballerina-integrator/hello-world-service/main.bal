@@ -28,7 +28,7 @@ configurable int b = ?;
 configurable string foo = ?;
 configurable string baz = ?;
 
-service / on new http:Listener(9090) {
+service / on new http:Listener(8090) {
 
     resource function get .(string name) returns string {
         // io:println(greetingStrMap);
