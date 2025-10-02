@@ -15,6 +15,13 @@ type Greeting record {
     map<NewGreeting> greetingStrMap;
 };
 
+configurable map<int[]> configArrayMap = ?;
+
+configurable map<string> configMap = {
+    key1: "value1",
+    key2: "value2"
+};
+
 configurable Greeting nestedGreeting = ?;
 // configurable Greeting|NewGreeting greetingN = ?;
 
@@ -41,6 +48,8 @@ service / on new http:Listener(8090) {
 
     // This function responds with `string` value `Hello, World!` to HTTP GET requests.
     resource function get greeting() returns string {
+        io:println("configArrayMap: ", configArrayMap);
+        io:println("configMap: ", configMap);
         return "Hello, World!";
     }
 
