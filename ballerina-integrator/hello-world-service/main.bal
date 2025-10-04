@@ -1,5 +1,7 @@
 import ballerina/http;
 import ballerina/io;
+import hello_world_service.modA;
+import hello_world_service.modB;
 
 type NewGreeting record {
     string newfrom;
@@ -35,6 +37,8 @@ configurable int b = ?;
 configurable string foo = ?;
 configurable string baz = ?;
 
+configurable string suffix = ?;
+
 service / on new http:Listener(8090) {
 
     resource function get .(string name) returns string {
@@ -43,6 +47,11 @@ service / on new http:Listener(8090) {
         // Greeting greetingMessage = {"from" : "name2", "to" : "name2", "message" : "BLUE"};
 
         io:println("intStringNil: ", intStringNil);
+
+        io:println("from modA: ", modA:hello(name));
+        io:println("suffix from main: ", suffix);
+        io:println("from modB: ", modB:hello(name));
+        
         return "greetingMessage";
     }
 
