@@ -17,6 +17,8 @@ type Greeting record {
     map<NewGreeting> greetingStrMap;
 };
 
+configurable int[] arr = ?;
+
 configurable map<int[]> configArrayMap = ?;
 
 configurable map<string> configMap = {
@@ -51,6 +53,8 @@ service / on new http:Listener(8090) {
         io:println("from modA: ", modA:hello(name));
         io:println("suffix from main: ", suffix);
         io:println("from modB: ", modB:hello(name));
+
+        io:println("arr: ", arr);
         
         return "greetingMessage";
     }
