@@ -19,6 +19,8 @@ type Greeting record {
 
 configurable int[] arr = ?;
 
+configurable map<int> configIntMap = ?;
+
 configurable map<int[]> configArrayMap = ?;
 
 configurable map<string> configMap = {
