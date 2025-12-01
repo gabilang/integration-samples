@@ -1,4 +1,4 @@
-configurable string suffix = ?;
+configurable string suffix = "asd";
 
 # Returns the string `Hello` with the input string name.
 #
