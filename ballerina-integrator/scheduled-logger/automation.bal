@@ -20,7 +20,7 @@ public function main() returns error? {
     // Print the timestamp in UTC format
     io:println("Current timestamp: " + formattedTime);
 
-    // if intervalInSeconds < 1 {
-    //     panic error("Interval must be at least 1 second");
-    // }
+    if intervalInSeconds < 1 {
+        panic error("Interval must be at least 1 second");
+    }
 }
