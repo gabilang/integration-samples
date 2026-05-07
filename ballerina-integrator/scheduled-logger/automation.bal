@@ -3,8 +3,8 @@ import ballerina/time;
 
 configurable string name = ?;
 configurable int intervalInSeconds = ?;
-// configurable int[] logAtSeconds = ?;
-// configurable map<int> configMap = ?;
+configurable int[] logAtSeconds = ?;
+configurable map<int> configMap = ?;
 
 
 public function main() returns error? {
@@ -14,8 +14,8 @@ public function main() returns error? {
 
     io:println("Configured Name: " + name);
     io:println("Logging Interval (seconds): " + intervalInSeconds.toString());
-    // io:println("Log at Seconds: " + logAtSeconds.toString());
-    // io:println("Config Map: " + configMap.toString());
+    io:println("Log at Seconds: " + logAtSeconds.toString());
+    io:println("Config Map: " + configMap.toString());
 
     // Print the timestamp in UTC format
     io:println("Current timestamp: " + formattedTime);
