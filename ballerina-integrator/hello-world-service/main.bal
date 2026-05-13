@@ -13,7 +13,7 @@ type Greeting record {
     string 'from;
     string to;
     string message;
-    NewGreeting[] newGreeting;
+    // NewGreeting[] newGreeting;
     map<NewGreeting> greetingStrMap;
 };
 
