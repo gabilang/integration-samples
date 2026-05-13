@@ -72,7 +72,7 @@ service / on new http:Listener(8090) {
         return str;
     }
 
-    resource function get bar() returns string {
+    resource function get default/hello-world-service-3/v0.1/bar() returns string {
         return foo;
     }
 
@@ -84,7 +84,7 @@ service / on new http:Listener(8090) {
         return a;
     }
 
-    resource function get getB() returns int {
+    resource function get default/hello-world-service-3/v0.1/getB() returns int {
         return b;
     }
 }
