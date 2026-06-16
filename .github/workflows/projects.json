@@ -1,0 +1,38 @@
+[
+  {
+    "path": "integrator-default-profile/samples/salesforceops-to-googlesheets"
+  },
+  {
+    "path": "integrator-default-profile/samples/new-shopify-customer-to-stripe"
+  },
+  {
+    "path": "integrator-default-profile/samples/signup-sfchatsync"
+  },
+  {
+    "path": "integrator-default-profile/samples/salesforce-leads-to-googlesheets"
+  },
+  {
+    "path": "integrator-default-profile/samples/shopify-customer-to-salesforce"
+  },
+  {
+    "path": "integrator-default-profile/samples/shopify-order-to-google-sheets"
+  },
+  {
+    "path": "integrator-default-profile/samples/new-shopify-order-to-slack"
+  },
+  {
+    "path": "integrator-default-profile/samples/jira-summary-mailchimp"
+  },
+  {
+    "path": "integrator-default-profile/samples/salesforce-closed-won-slack-notifier"
+  },
+  {
+    "path": "integrator-default-profile/samples/salesforce-performance-summary-to-email"
+  },
+  {
+    "path": "integrator-default-profile/samples/shopify-to-quickbooks-transaction"
+  },
+  {
+    "path": "integrator-default-profile/samples/github-issue-to-google-chat"
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "products": [
+    {"id": "P001", "name": "SoundPro X200 Wireless Headphones", "category": "Electronics", "price": 89.99, "stock": 14},
+    {"id": "P002", "name": "ErgoDesk Laptop Stand",             "category": "Electronics", "price": 34.99, "stock": 8},
+    {"id": "P003", "name": "FitFlex Running Shoes",             "category": "Clothing",    "price": 69.99, "stock": 0},
+    {"id": "P004", "name": "CozHome Throw Blanket",             "category": "Home Goods",  "price": 29.99, "stock": 22},
+    {"id": "P005", "name": "BrightView LED Desk Lamp",          "category": "Home Goods",  "price": 44.99, "stock": 5}
+  ],
+  "orders": {
+    "ORD-001": {
+      "orderId": "ORD-001",
+      "customerName": "Alice",
+      "items": ["SoundPro X200 Wireless Headphones"],
+      "status": "Delivered",
+      "estimatedDelivery": "2026-04-30"
+    },
+    "ORD-042": {
+      "orderId": "ORD-042",
+      "customerName": "Bob",
+      "items": ["ErgoDesk Laptop Stand", "BrightView LED Desk Lamp"],
+      "status": "Out for delivery",
+      "estimatedDelivery": "2026-05-07"
+    },
+    "ORD-099": {
+      "orderId": "ORD-099",
+      "customerName": "Carol",
+      "items": ["FitFlex Running Shoes"],
+      "status": "Processing",
+      "estimatedDelivery": "2026-05-10"
+    }
+  }
+}

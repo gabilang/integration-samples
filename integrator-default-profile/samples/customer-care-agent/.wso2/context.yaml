@@ -1,0 +1,3 @@
+- org: wso2
+  project: customer-care-agent
+  local: true
