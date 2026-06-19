@@ -31,9 +31,9 @@ configurable map<string> configMap = {
 configurable Greeting nestedGreeting = ?;
 // configurable Greeting|NewGreeting greetingN = ?;
 
-configurable string? nullString = "abc";
+configurable string? nullString = "abcd";
 
-configurable string|int|null intStringNil = "abc";
+configurable string|int|null intStringNil = "abcd";
 
 configurable string str = ?; 
 configurable int a = ?;
