@@ -1,3 +1,3 @@
-configurable string ftpPassword = "";
-configurable string ftpUser = "anonymous";
-configurable string ftpHost = "tgftp.nws.noaa.gov";
+configurable string sftpPassword = "password";
+configurable string sftpUser = "demo";
+configurable string sftpHost = "test.rebex.net";

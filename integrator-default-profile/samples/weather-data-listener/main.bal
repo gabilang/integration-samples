@@ -2,18 +2,22 @@ import ballerina/ftp;
 import ballerina/io;
 import ballerina/log;
 
-// Listen for weather data files on an FTP server
+// Listen for files on an SFTP server
 listener ftp:Listener WeatherData = new (
-    path = "/data/observations/metar/decoded/",
+    protocol = ftp:SFTP,
+    host = sftpHost,
+    port = 22,
+    path = "/pub/example/",
     auth = {
         credentials: {
-            username: ftpUser,
-            password: ftpPassword
-        }
+            username: sftpUser,
+            password: sftpPassword
+        },
+        preferredMethods: [ftp:PASSWORD]
     },
-    host = ftpHost,
     pollingInterval = 10, // Check for new files every 10 seconds
-    fileNamePattern = "(.*).TXT" // Process only .TXT files
+    fileNamePattern = "(.*).txt" // Process only .txt files
+    // sftpSshKnownHosts omitted => host-key verification is skipped (fine for this public test server)
 );
 
 // Triggered when new files are added to the FTP path
@@ -35,7 +39,7 @@ service ftp:Service on WeatherData {
                     int? firstLineIndex = fileContent.indexOf("\n");
                     if firstLineIndex is int {
                         string location = fileContent.substring(0, firstLineIndex);
-                        log:printInfo("Received weather information from: " + location);
+                        log:printInfo("Received file. First line: " + location);
                     }
                 } else {
                     log:printError("Failed to read weather content");
