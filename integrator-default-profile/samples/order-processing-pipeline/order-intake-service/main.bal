@@ -5,7 +5,8 @@ listener http:Listener httpDefaultListener = http:getDefaultListener();
 
 // Order-intake service (producer). Accepts an order over HTTP and publishes it as
 // an event to the Kafka orders topic, then returns immediately. Order processing
-// happens asynchronously in the Kafka listener, decoupling intake from fulfillment.
+// happens asynchronously in the separate order-processor component, decoupling
+// intake from fulfillment.
 service /orders on httpDefaultListener {
 
     resource function post .(Order placedOrder) returns OrderResponse|http:InternalServerError {

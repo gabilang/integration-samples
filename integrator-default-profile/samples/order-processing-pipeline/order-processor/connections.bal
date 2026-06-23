@@ -1,0 +1,17 @@
+import ballerinax/kafka;
+
+// Producer used to route high-value orders to the fulfillment topic.
+final kafka:Producer orderProducer = check initOrderProducer();
+
+isolated function initOrderProducer() returns kafka:Producer|error {
+    kafka:ProducerConfiguration producerConfig = {securityProtocol: getKafkaSecurityProtocol()};
+    kafka:SecureSocket? secureSocket = getKafkaSecureSocket();
+    if secureSocket is kafka:SecureSocket {
+        producerConfig.secureSocket = secureSocket;
+    }
+    kafka:AuthenticationConfiguration? auth = getKafkaAuth();
+    if auth is kafka:AuthenticationConfiguration {
+        producerConfig.auth = auth;
+    }
+    return new (kafkaBootstrapServers, producerConfig);
+}
