@@ -38,6 +38,7 @@ configurable string|int|null intStringNil = "abcd";
 configurable string str = ?; 
 configurable int a = ?;
 configurable int b = ?;
+configurable int c = ?;
 configurable string foo = ?;
 configurable string baz = ?;
 
@@ -57,6 +58,7 @@ service / on new http:Listener(8090) {
         io:println("from modB: ", modB:hello(name));
 
         io:println("arr: ", arr);
+        io:println("c: ", c);
         
         return "greetingMessage";
     }
