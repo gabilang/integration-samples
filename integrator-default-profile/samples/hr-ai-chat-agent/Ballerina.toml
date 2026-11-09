@@ -3,3 +3,10 @@ org = "wso2"
 name = "hr_ai_chat_agent"
 version = "0.1.0"
 distribution = "2201.12.9"
+
+# ballerinax/ai.agent 0.9.2 depends on openai.chat 4.x; without this pin the
+# direct import resolves to 5.x and the two major versions conflict.
+[[dependency]]
+org = "ballerinax"
+name = "openai.chat"
+version = "4.0.0"
